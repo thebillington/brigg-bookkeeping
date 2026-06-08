@@ -1,0 +1,13 @@
+label: "What Clients Say"
+title: "Kind words from <span class=\"text-accent\">local businesses</span>"
+subtitle: "I'm proud of the relationships I build with my clients. Here's what they say about working with Brigg Bookkeeping."
+testimonials:
+  - quote: "I'll update these with real testimonials from clients. This is a placeholder."
+    name: "Client Name"
+    business: "Local Business"
+  - quote: "Feel free to reach out and I can populate this section with genuine feedback from the businesses I support."
+    name: "Client Name"
+    business: "Local Business"
+  - quote: "Real testimonials help build trust. Once you share them with me, I'll add them here straight away."
+    name: "Client Name"
+    business: "Local Business"

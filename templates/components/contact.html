@@ -1,0 +1,24 @@
+<section id="contact" style="background: var(--dark-bg);">
+  <div class="max-w-6xl mx-auto px-6 py-20 lg:py-24">
+    <div class="max-w-2xl mx-auto text-center fade-up">
+      <span class="text-xs font-semibold uppercase tracking-[0.2em]" style="color: var(--accent);">{{ contact.label }}</span>
+      <h2 class="section-title mt-3 mb-4 text-white">{{ contact.title }}</h2>
+      <p class="text-lg" style="color: rgba(255,255,255,0.6); max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7;">{{ contact.subtitle }}</p>
+      <div class="gold-rule mx-auto mt-6 mb-10"></div>
+      <a href="mailto:{{ contact.email }}" class="btn-gold text-lg">
+        {{ contact.cta_label }}
+        <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+      </a>
+      <div class="flex flex-col items-center gap-2 mt-10">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="map-pin" style="width: 14px; height: 14px; color: var(--accent);"></i>
+          <span class="text-sm" style="color: rgba(255,255,255,0.5);">{{ contact.location }}</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="mail" style="width: 14px; height: 14px; color: var(--accent);"></i>
+          <a href="mailto:{{ contact.email }}" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5); text-decoration: none;">{{ contact.email }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

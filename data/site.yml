@@ -1,0 +1,25 @@
+title: "Brigg Bookkeeping LTD | Professional Bookkeeping, Brigg"
+brand: "Brigg Bookkeeping"
+description: "Trusted ICB-qualified bookkeeper serving Brigg and North Lincolnshire. 25 years experience, personal service, tailored support for local businesses."
+base_url: "https://www.briggbookkeeping.co.uk"
+email: "briggbookkeeping@outlook.com"
+
+colors:
+  background: "#f7f5f1"
+  surface: "#ffffff"
+  text-dark: "#1a1a1a"
+  text-muted: "#5c5c5c"
+  primary: "#13203a"
+  primary-light: "#e8ebf0"
+  accent: "#c49a6c"
+  accent-light: "#f2ebe2"
+  section-bg: "#efece6"
+  dark-bg: "#13203a"
+
+fonts:
+  heading: "Playfair Display"
+  body: "Nunito"
+
+images:
+  logo: "images/logo.png"
+  award: "images/luca-award-nominee.png"

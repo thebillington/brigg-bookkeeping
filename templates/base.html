@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ site.base_url }}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="{{ site.colors['primary'] }}">
+  <link rel="canonical" href="{{ site.base_url }}">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background: {{ site.colors['background'] }};
+      --surface: {{ site.colors['surface'] }};
+      --text-dark: {{ site.colors['text-dark'] }};
+      --text-muted: {{ site.colors['text-muted'] }};
+      --primary: {{ site.colors['primary'] }};
+      --primary-light: {{ site.colors['primary-light'] }};
+      --accent: {{ site.colors['accent'] }};
+      --accent-light: {{ site.colors['accent-light'] }};
+      --section-bg: {{ site.colors['section-bg'] }};
+      --dark-bg: {{ site.colors['dark-bg'] }};
+    }
+
+    html { scroll-padding-top: 80px; }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-heading { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'Nunito', sans-serif; }
+
+    .text-accent { color: var(--accent); }
+
+    .gold-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .nav-link {
+      position: relative;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.25rem 0;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: var(--accent); }
+    .nav-link:hover::after,
+    .nav-link.active::after { width: 100%; }
+
+    .service-card {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .service-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 12px 40px rgba(19, 32, 58, 0.06);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.25rem;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #1f3460;
+      box-shadow: 0 6px 28px rgba(19, 32, 58, 0.25);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.25rem;
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.5rem;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      background: #b88958;
+      box-shadow: 0 6px 28px rgba(196, 154, 108, 0.3);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .stat-item + .stat-item {
+      border-left: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .testimonial-card {
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover {
+      border-color: var(--accent);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-dark);
+    }
+
+    @media (max-width: 768px) {
+      .section-title { font-size: 1.75rem; }
+      .btn-primary, .btn-secondary, .btn-gold {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.85rem;
+      }
+      .stat-item + .stat-item { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); }
+    }
+  </style>
+</head>
+<body>
+  {% block content %}{% endblock %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+      const toggle = document.getElementById('mobile-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+        });
+      }
+
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('section[id]');
+      function setActive() {
+        let current = '';
+        sections.forEach(s => {
+          const top = s.offsetTop - 120;
+          if (window.scrollY >= top) current = s.getAttribute('id');
+        });
+        navLinks.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+        });
+      }
+      window.addEventListener('scroll', setActive);
+      setActive();
+
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

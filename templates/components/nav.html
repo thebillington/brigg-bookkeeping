@@ -1,0 +1,26 @@
+<nav class="fixed top-0 left-0 right-0 z-50" style="background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06);">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between" style="height: 76px;">
+      <a href="#hero" class="flex items-center shrink-0">
+        <img src="{{ site.images.logo }}" alt="{{ site.brand }}" class="h-9 w-auto">
+      </a>
+      <div class="hidden md:flex items-center gap-1">
+        {% for item in nav %}
+        <a href="{{ item.href }}" class="nav-link px-4 py-2" style="color: var(--text-muted);">{{ item.label }}</a>
+        {% endfor %}
+        <a href="#contact" class="btn-primary text-sm py-2.5 px-5" style="margin-left: 1rem;">Book a Free Chat</a>
+      </div>
+      <button id="mobile-toggle" class="md:hidden p-2" aria-label="Toggle menu">
+        <i data-lucide="menu" style="width: 24px; height: 24px; color: var(--text-dark);"></i>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden" style="background: white; border-top: 1px solid rgba(0,0,0,0.06);">
+    <div class="px-6 py-4 flex flex-col gap-1">
+      {% for item in nav %}
+      <a href="{{ item.href }}" class="px-3 py-2.5 text-sm font-semibold" style="color: var(--text-muted); text-decoration: none;" onclick="document.getElementById('mobile-menu').classList.add('hidden')">{{ item.label }}</a>
+      {% endfor %}
+      <a href="#contact" class="btn-primary text-sm py-2.5 px-5 text-center" style="margin-top: 0.5rem;">Book a Free Chat</a>
+    </div>
+  </div>
+</nav>

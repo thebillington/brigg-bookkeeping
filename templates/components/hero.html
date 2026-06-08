@@ -1,0 +1,44 @@
+<section id="hero" style="padding-top: 76px;">
+  <div style="background: linear-gradient(180deg, var(--surface) 0%, var(--background) 100%);">
+    <div class="max-w-6xl mx-auto px-6 py-20 lg:py-28">
+      <div class="max-w-4xl mx-auto text-center fade-up">
+        <div class="flex justify-center mb-6">
+          <img src="{{ site.images.logo }}" alt="{{ site.brand }}" class="h-16 lg:h-20 w-auto">
+        </div>
+        <div class="flex items-center justify-center gap-2 mb-6">
+          <span class="gold-rule"></span>
+          <span class="text-xs font-semibold uppercase tracking-[0.2em]" style="color: var(--accent);">{{ hero.badge }}</span>
+          <span class="gold-rule"></span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15]" style="color: var(--text-dark); margin-bottom: 1.25rem;">
+          {{ hero.title }}
+        </h1>
+        <p class="text-lg md:text-xl" style="color: var(--text-muted); margin-bottom: 2.5rem; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+          {{ hero.subtitle }}
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="{{ hero.primary_cta.href }}" class="btn-primary">
+            {{ hero.primary_cta.label }}
+            <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+          </a>
+          <a href="{{ hero.secondary_cta.href }}" class="btn-secondary">
+            {{ hero.secondary_cta.label }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: var(--primary);">
+    <div class="max-w-4xl mx-auto px-6 py-6">
+      <div class="grid grid-cols-2 md:grid-cols-4">
+        {% for stat in hero.stats %}
+        <div class="stat-item">
+          <p class="font-heading text-2xl md:text-3xl font-bold" style="color: var(--accent);">{{ stat.number }}</p>
+          <p class="text-xs font-semibold uppercase tracking-wider mt-1" style="color: rgba(255,255,255,0.7);">{{ stat.label }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

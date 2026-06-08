@@ -1,0 +1,18 @@
+badge: "ICB Qualified & Licensed Bookkeeper"
+title: "Professional bookkeeping,<br>personally delivered in <span class=\"text-accent\">Brigg</span>"
+subtitle: "I help local businesses take control of their finances, with 25 years of experience, ICB qualifications, and a genuine commitment to your success."
+stats:
+  - number: "25+"
+    label: "Years Experience"
+  - number: "ICB"
+    label: "Licensed & Regulated"
+  - number: "50+"
+    label: "Local Businesses"
+  - number: "5 Star"
+    label: "Client Rating"
+primary_cta:
+  label: "Book a Free Chat"
+  href: "#contact"
+secondary_cta:
+  label: "About Me"
+  href: "#about"

@@ -1,0 +1,19 @@
+label: "About"
+title: "Trusted bookkeeping,<br>rooted in <span class=\"text-accent\">Brigg</span>"
+intro: "I'm Tracy Bland, a qualified ICB bookkeeper based in Brigg, North Lincolnshire. I set up Brigg Bookkeeping to offer local businesses the same standard of financial care I'd want for myself."
+body:
+  - paragraph: "For 25 years I worked in finance across a wide range of businesses, from manufacturing to service industries all over the UK. That experience taught me that good bookkeeping isn't just about numbers. It's about understanding your business, reducing your stress, and giving you the clarity to make confident decisions."
+  - paragraph: "In 2023 I obtained my ICB Bookkeeping Licence with the highest grade, Distinction with Honours, and was nominated for ICB Student of the Year. I'm now studying toward Level 4 so I can offer even more to my clients. I'm also CIMA qualified in Management Accounting."
+  - paragraph: "Above all, I pride myself on being approachable, reliable, and genuinely invested in the businesses I support. I know finance isn't everyone's passion, so let me take it off your hands."
+cta:
+  label: "Let's Talk"
+  href: "#contact"
+qualifications:
+  - title: "ICB Bookkeeping Licence"
+    subtitle: "Distinction with Honours"
+  - title: "ICB Student of the Year"
+    subtitle: "Nominated 2023"
+  - title: "CIMA Management Accounting"
+    subtitle: "Passed 2008"
+  - title: "Money Laundering Regs 2017"
+    subtitle: "ICB Supervised"

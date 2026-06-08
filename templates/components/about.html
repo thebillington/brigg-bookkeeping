@@ -1,0 +1,51 @@
+<section id="about" style="background: var(--surface);">
+  <div class="max-w-6xl mx-auto px-6 py-20 lg:py-24">
+    <div class="flex flex-col lg:flex-row items-start gap-14 lg:gap-20">
+      <div class="flex-1 fade-up">
+        <span class="text-xs font-semibold uppercase tracking-[0.2em]" style="color: var(--accent);">{{ about.label }}</span>
+        <div class="gold-rule mt-3 mb-6"></div>
+        <h2 class="section-title mb-6">{{ about.title }}</h2>
+        <p class="text-lg font-medium mb-6" style="color: var(--text-dark); line-height: 1.8;">{{ about.intro }}</p>
+        {% for block in about.body %}
+        <p class="mb-5" style="color: var(--text-muted); line-height: 1.8;">{{ block.paragraph }}</p>
+        {% endfor %}
+        <a href="{{ about.cta.href }}" class="btn-primary mt-2">
+          {{ about.cta.label }}
+          <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+        </a>
+      </div>
+      <div class="w-full lg:w-96 shrink-0 fade-up">
+        <div style="background: var(--section-bg);">
+          <div style="aspect-ratio: 4/3; background: var(--primary-light); display: flex; align-items: center; justify-content: center;">
+            <div class="text-center p-8">
+              <i data-lucide="user" style="width: 48px; height: 48px; color: var(--accent); margin: 0 auto 1rem; display: block;"></i>
+              <p class="text-sm font-semibold" style="color: var(--text-muted);">Professional portrait coming soon</p>
+              <p class="text-xs mt-1" style="color: var(--text-muted);">— Tracy Bland</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 1.5rem; border: 1px solid rgba(0,0,0,0.06); padding: 1.75rem;">
+          <h3 class="font-heading text-lg font-semibold mb-5" style="color: var(--text-dark);">Qualifications</h3>
+          <div class="space-y-4">
+            {% for q in about.qualifications %}
+            <div class="flex items-start gap-3">
+              <div style="width: 20px; height: 20px; margin-top: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent);"></i>
+              </div>
+              <div>
+                <p class="text-sm font-semibold" style="color: var(--text-dark);">{{ q.title }}</p>
+                <p class="text-xs" style="color: var(--text-muted);">{{ q.subtitle }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(0,0,0,0.06);">
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);">
+              Supervised in accordance with the Money Laundering Regulations 2017 (MLR) through the ICB.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
